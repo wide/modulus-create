@@ -1,0 +1,157 @@
+@use '../settings/animations' as *;
+@use '../settings/colors' as *;
+
+
+// =============================================================================
+// 5# Elements / Forms
+// =============================================================================
+
+label,
+.label {
+  display: inline-block;
+  cursor: pointer;
+  padding: .4rem .8rem;
+  margin: 0;
+  color: $black-lighter;
+
+  .-required &::after {
+    content: '*';
+  }
+
+  .form-line.-touched.-invalid &,
+  form.-submitted .form-line.-invalid & {
+    color: $form-error;
+  }
+}
+
+input,
+.input,
+select,
+textarea,
+.checkbox label::before,
+.radio label::before {
+  width: 100%;
+  border: 1px solid $form-border-color;
+  border-radius: 2px;
+  padding: 12px 18px;
+  //outline: none;
+  transition: all $anim-speed-fast;
+
+  .form-line.-touched.-invalid &,
+  form.-submitted .form-line.-invalid & {
+    border-color: $form-error;
+  }
+}
+
+input,
+.input,
+select,
+textarea {
+  &:active, &:focus {
+    border-color: $form-active-border-color;
+  }
+}
+
+textarea {
+  height: 20rem;
+}
+
+
+//
+// Custom checkbox and radio input
+//
+.checkboxes,
+.radios {
+  list-style: none;
+  padding: .8rem 0;
+  margin: 0;
+}
+
+.checkbox,
+.radio {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 2rem;
+
+  label {
+    padding: 0 !important;
+    width: auto !important;
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 2rem;
+      height: 2rem;
+      padding: 0;
+      margin-right: 8px;
+      margin-top: -2px;
+      text-align: center;
+      line-height: 100%;
+    }
+    &::after { content: '' }
+  }
+
+  input {
+    position: absolute;
+    top: -9999;
+    opacity: 0;
+    width: auto;
+
+    &:active + label::before,
+    &:focus + label::before {
+      border-color: $form-active-border-color;
+    }
+  }
+}
+
+.checkbox {
+  input {
+    &:checked + label::before {
+      content: '✓';
+    }
+  }
+}
+
+.radio {
+  label::before {
+    border-radius: 100%;
+  }
+
+  input {
+    &:checked + label::before {
+      content: '•';
+    }
+  }
+}
+
+
+//
+// Line containing label and control and error
+//
+.form-line {
+  padding: 5px 0;
+}
+.form-error {
+  display: none;
+  padding: 5px 0;
+  color: $form-error;
+  border-color: $form-error;
+
+  .form-line.-touched.-invalid &,
+  form.-submitted .form-line.-invalid & {
+    display: block;
+  }
+}
+.form-controls {
+  margin-top: 25px;
+}
+
+
+//
+// External form related components
+//
+.dropdown_current {
+  padding: 12px 18px;
+  border-radius: 2px;
+  border-color: $gray;
+}

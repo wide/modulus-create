@@ -1,0 +1,81 @@
+{% extends 'layouts/default' %}
+{% block header %}
+
+  {# exemple of an header with parallax effect #}
+  {# see /src/components/header/ #}
+  {% include 'components/header' with {
+    image: 'https://picsum.photos/id/1060/5598/3732',
+    title: site.title | upper
+  } %}
+
+{% endblock %}
+{% block main %}
+
+  {# exemple of text with image on the right #}
+  {# see /src/components/text/ #}
+	<section class="section" data-viewport="fade-up">
+		<div class="container">
+			{% include 'components/text' with {
+        title: fake('lorem.words'),
+        text: fake('lorem.paragraphs', 4),
+        image: 'https://picsum.photos/540/350?random=1'
+      } %}
+		</div>
+	</section>
+
+  {# exemple of text with image on the left #}
+  {# see /src/components/text/ #}
+	<section class="section -gray" data-viewport="fade-up">
+		<div class="container">
+			{% include 'components/text' with {
+        title: fake('lorem.words'),
+        text: fake('lorem.paragraphs', 4),
+        image: 'https://picsum.photos/540/350?random=2',
+        reverse: true
+      } %}
+		</div>
+	</section>
+
+  {# exemple of centered text with a call-to-action button #}
+  {# see /src/components/text/ #}
+	<section class="section" data-viewport="fade-up">
+		<div class="container">
+			{% include 'components/text' with {
+        title: fake('lorem.words'),
+        text: fake('lorem.paragraphs', 4),
+        cta: {
+          url: '#',
+          text: 'CLICK ME'
+        }
+      } %}
+		</div>
+	</section>
+
+  {# exemple of the slider component using cards #}
+  {# see /src/components/card-slider/ #}
+	<section class="section -gray" data-viewport="fade-up">
+		<div class="container">
+			<h2>{{ fake('lorem.words', 3) | capitalize }}</h2>
+			{% include 'components/card-slider' with {
+        cards: [{
+          image: 'https://picsum.photos/1080/900?random=1',
+          title: fake('lorem.words', 2),
+          text: fake('lorem')
+        }, {
+          image: 'https://picsum.photos/1080/900?random=2',
+          title: fake('lorem.words', 3),
+          text: fake('lorem')
+        }, {
+          image: 'https://picsum.photos/1080/900?random=3',
+          title: fake('lorem.words', 4),
+          text: fake('lorem')
+        }, {
+          image: 'https://picsum.photos/1080/900?random=4',
+          title: fake('lorem.words', 5),
+          text: fake('lorem')
+        }]
+      } %}
+		</div>
+	</section>
+
+{% endblock %}
