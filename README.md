@@ -6,7 +6,7 @@
 ## Usage
 
 ```
-npx create-modulus-project project-name
+npx modulus-create project-name
 ```
 
 
