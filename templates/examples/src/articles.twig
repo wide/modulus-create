@@ -15,7 +15,7 @@
   <div class="articles section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-3@lg">
 
           <div class="articles_filters">
 
@@ -40,11 +40,11 @@
           </div>
 
         </div>
-        <div class="col-lg-9">
+        <div class="col-9@lg">
 
           <div class="row">
           {% for i in 1..20 %}
-            <div class="col-lg-4" data-viewport.once="fade-up">
+            <div class="col-4@lg" data-viewport.once="fade-up">
               {% include '::card' with {
                 image: 'https://picsum.photos/1080/900?random=' ~ i,
                 title: fake('lorem.words', 2),

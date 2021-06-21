@@ -1,7 +1,7 @@
 <div class="text {% if image %}-image{% else %}-only{% endif %} {% if reverse %}-reverse{% endif %}">
   <div class="{% if image %}row{% endif %}">
 
-    <div class="{% if image %}col-lg-6{% endif %} {% if reverse %}order-2{% endif %}">
+    <div class="{% if image %}col-6@lg{% endif %} {% if reverse %}order-2{% endif %}">
       <h2>{{ title }}</h2>
       <p>
         {% block text %}
@@ -12,7 +12,7 @@
     </div>
 
     {% if image %}
-    <div class="col-lg-6 {% if reverse %}order-1{% endif %}">
+    <div class="col-6@lg {% if reverse %}order-1{% endif %}">
       <img src="{{ image }}" alt="">
     </div>
     {% endif %}

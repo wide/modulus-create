@@ -1,0 +1,13 @@
+@use '~/core' as *;
+
+// grid
+@use
+  '@wide/styles-grid' as grid with (
+    $containers: (),
+    $grid-gutter: $grid-gutter-default
+  );
+
+// load css grid
+@include grid.container;
+@include grid.row;
+@include grid.col;

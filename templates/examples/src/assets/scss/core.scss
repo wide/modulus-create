@@ -1,0 +1,35 @@
+///
+/// This file is to be imported into your scss.
+/// It allows you to use variables and mixins / functions.
+/// Please note that this file does not generate a css.
+///
+
+///
+/// Modulus utils
+///
+@forward
+  '@wide/styles-utils' with (
+    $body-context-rem: 10px,
+    $breakpoints: (
+      'xs': 326px,
+      'sm': 576px,
+      'md': 768px,
+      'lg': 1024px,
+      'xl': 1200px,
+      'xxl': 1600px
+    )
+  );
+
+///
+/// Variables
+///
+
+@forward 'variables/animations';
+@forward 'variables/colors';
+@forward 'variables/fonts';
+@forward 'variables/grid';
+
+///
+/// Mixins
+///
+// @forward 'mixins/mymixin' as mymixin-*;

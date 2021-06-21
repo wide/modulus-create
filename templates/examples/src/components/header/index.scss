@@ -1,4 +1,4 @@
-@use '@wide/styles-utils' as mixins;
+@use '~/core' as *;
 
 .header {
   position: relative;
@@ -28,7 +28,7 @@
   }
   p {
     font-size: 2rem;
-    @include mixins.bp-up(lg) {
+    @include bp-up(lg) {
       width: 45%;
     }
   }

@@ -1,16 +1,4 @@
-// variables
-@use 'settings/animations' as *;
-@use 'settings/breakpoints' as *;
-@use 'settings/colors' as *;
-@use 'settings/env' as *;
-@use 'settings/fonts' as *;
-@use 'settings/layout' as *;
-@use 'settings/ratios' as *;
-
-// mixins and functions
-@use '@wide/styles-utils' with (
-  $breakpoints: $breakpoints
-);
+@use '~/core' as *;
 
 // base reset
 @use '@wide/styles-reset';
@@ -19,6 +7,7 @@
 @use 'generic/fonts';
 @use 'generic/common';
 @use 'generic/animation';
+@use 'generic/grid';
 
 // modulus components
 @use '@wide/modulus-accordion';
@@ -27,18 +16,13 @@
 @use '@wide/modulus-modal';
 
 // project components (@ alias of src/)
-@use '@/components/topmenu';
-@use '@/components/header';
-@use '@/components/footer';
-@use '@/components/text';
-@use '@/components/card';
-@use '@/components/card-slider';
-@use '@/components/modal-login';
-
-// grid
-@use 'bootstrap/scss/bootstrap-grid' with (
-  $grid-breakpoints: $grid-breakpoints
-);
+@use '@/topmenu';
+@use '@/header';
+@use '@/footer';
+@use '@/text';
+@use '@/card';
+@use '@/card-slider';
+@use '@/modal-login';
 
 // elements
 @use 'elements/buttons';
