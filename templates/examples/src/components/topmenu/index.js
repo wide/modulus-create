@@ -1,6 +1,7 @@
 import modulus from '@wide/modulus'
+import Component from '@wide/modulus/src/component'
 
-modulus.component('topmenu', class {
+modulus.component('topmenu', class extends Component {
   run() {
     // hide / show on scroll
     this.on('scroll.down', e => this.el.classList.add('-hidden'))
