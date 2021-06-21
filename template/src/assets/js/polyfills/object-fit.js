@@ -1,1 +1,0 @@
-import '@wide/polyfiller/lib/presets/object-fit'
