@@ -1,47 +1,38 @@
-// variables
-@use 'settings/animations' as *;
-@use 'settings/breakpoints' as *;
-@use 'settings/colors' as *;
-@use 'settings/env' as *;
-@use 'settings/fonts' as *;
-@use 'settings/layout' as *;
-@use 'settings/ratios' as *;
-
-// mixins and functions
-@use '@wide/styles-utils' with (
-  $breakpoints: $breakpoints
-);
+@use 'core';
 
 // base reset
 @use '@wide/styles-reset';
 
+// grid
+@use
+  '@wide/styles-grid' as grid with (
+    $grid-prefix: 's-',
+    $containers: (),
+    $grid-gutter: $grid-gutter-default
+  );
+
 // generic
-@use 'generic/fonts';
-@use 'generic/common';
-@use 'generic/animation';
+// @use 'generic/fonts';
+// @use 'generic/common';
+// @use 'generic/animation';
 
 // modulus components
-@use '@wide/modulus-accordion';
-@use '@wide/modulus-dropdown';
-@use '@wide/modulus-slider';
-@use '@wide/modulus-modal';
+// @use '@wide/modulus-accordion';
+// @use '@wide/modulus-dropdown';
+// @use '@wide/modulus-slider';
+// @use '@wide/modulus-modal';
 
 // project components (@ alias of src/)
-@use '@/components/topmenu';
-@use '@/components/header';
-@use '@/components/footer';
-@use '@/components/text';
-@use '@/components/card';
-@use '@/components/card-slider';
-@use '@/components/modal-login';
-
-// grid
-@use 'bootstrap/scss/bootstrap-grid' with (
-  $grid-breakpoints: $grid-breakpoints
-);
+// @use '@/components/topmenu';
+// @use '@/components/header';
+// @use '@/components/footer';
+// @use '@/components/text';
+// @use '@/components/card';
+// @use '@/components/card-slider';
+// @use '@/components/modal-login';
 
 // elements
-@use 'elements/buttons';
-@use 'elements/forms';
-@use 'elements/section';
-@use 'elements/table';
+// @use 'elements/buttons';
+// @use 'elements/forms';
+// @use 'elements/section';
+// @use 'elements/table';
