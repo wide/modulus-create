@@ -9,9 +9,7 @@ module.exports = {
       title: 'My Project'
     },
     menu: {
-      Home:     'index.html',
-      Articles: 'articles.html',
-      FAQ:      'faq.html'
+      Home: 'index.html'
     }
   },
   functions: {
