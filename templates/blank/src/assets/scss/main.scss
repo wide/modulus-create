@@ -1,0 +1,19 @@
+// variables
+@use 'settings/colors' as *;
+@use 'settings/fonts' as *;
+
+// mixins and functions
+@use '@wide/styles-utils';
+
+// grid
+@use '@wide/styles-grid';
+
+// base reset
+@use '@wide/styles-reset';
+
+// generic
+@use 'generic/fonts';
+@use 'generic/common';
+
+// project components (@ alias of src/)
+// @use '@/components/my-component';

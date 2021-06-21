@@ -1,0 +1,36 @@
+@use '../settings/fonts' as *;
+
+
+// =============================================================================
+// 4# Generic / Common
+// =============================================================================
+body {
+  min-height: 100vh;
+
+  /// keep the footer at the bottom of the page
+  /// @example html
+  ///   <body>
+  ///     <main></main>
+  ///     <footer></footer>
+  ///   </body>
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-default;
+  font-size: 1.6rem;
+}
+
+main {
+  // keep the footer at the bottom of the page
+  flex-grow: 1;
+}
+
+// fix for IE 11
+a, button {
+  svg {
+    pointer-events: none;
+  }
+}
+
+.container {
+  max-width: 1400px !important;
+}

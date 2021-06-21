@@ -1,0 +1,35 @@
+// =============================================================================
+// 1# Settings / Breakpoints
+// =============================================================================
+
+// Breakpoints
+// =============================================================================
+$breakpoints: (
+  xs: 326px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+// Overide bootstrap breakpoints (xs must be 0)
+$grid-breakpoints: map-merge($breakpoints, ( xs: 0 ));
+
+
+// Containers properties
+// =============================================================================
+$containers: (
+  default: (
+    padding: 2rem,
+    max-width: 100%
+  ),
+  md: (
+    padding: 4rem,
+    max-width: 1440px
+  ),
+  // xxl: (
+  //   padding: 0,
+  //   max-width: 1440px
+  // ),
+);

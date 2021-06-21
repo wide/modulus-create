@@ -1,0 +1,13 @@
+{% set slides = [] %}
+{% for card in cards %}
+  {% set tpl %}
+    {% include '../card' with card %}
+  {% endset %}
+  {% set slides = slides | merge({ (loop.index): tpl }) %}
+{% endfor %}
+
+{% include '@wide::modulus-slider' with {
+  class: 'card-slider',
+  slides: slides,
+  component: 'cardslider'
+} %}
