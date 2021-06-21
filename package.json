@@ -13,7 +13,7 @@
     "node": ">=12.18.0"
   },
   "scripts": {
-    "build": "babel src/ -d lib/ --presets babel-preset-es2015 --presets=@babel/preset-env",
+    "build": "babel src/ -d lib/ --presets=@babel/preset-env",
     "prepare": "rimraf lib/ && npm run build"
   },
   "dependencies": {
