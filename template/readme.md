@@ -3,7 +3,7 @@
 
 ## Requirement
 
-- [NodeJS](https://nodejs.org) `10.13.0 LTS` minimum
+- [NodeJS](https://nodejs.org) `12.18.0 LTS` minimum
 - NPM `5.6.0`
 
 

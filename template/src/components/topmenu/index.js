@@ -1,8 +1,7 @@
-import Component from '@wide/modulus/src/component'
+import modulus from '@wide/modulus'
 
-export default class extends Component {
+modulus.component('topmenu', class {
   run() {
-
     // hide / show on scroll
     this.on('scroll.down', e => this.el.classList.add('-hidden'))
     this.on('scroll.up', e => this.el.classList.remove('-hidden'))
@@ -12,4 +11,4 @@ export default class extends Component {
       console.log('lang changed to:', e.target.value)
     })
   }
-}
+})
