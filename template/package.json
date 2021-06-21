@@ -21,10 +21,10 @@
     "@wide/pageflip": "^2.1.1",
     "@wide/polyfiller": "^2.1.1",
     "@wide/scroll": "^2.1.0",
-    "@wide/styles-utils": "^2.0.3",
-    "@wide/styles-reset": "^2.0.2",
+    "@wide/styles-utils": "^2.1.0",
+    "@wide/styles-reset": "^2.1.0",
     "@wide/styles-helpers": "^2.0.4",
-    "@wide/styles-grid": "^2.0.4",
+    "@wide/styles-grid": "^2.1.0",
     "@wide/viewport": "^2.1.0"
   },
   "devDependencies": {
