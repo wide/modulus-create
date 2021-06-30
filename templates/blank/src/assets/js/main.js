@@ -6,9 +6,6 @@ import modulus from '@wide/modulus'
 // import '@wide/scroll/lib/locker'
 // import '@wide/scroll/lib/parallax'
 
-// project components (@ alias of src/)
-// import myComponent from '@/components/my-component'
-
 // define breakpoints
 // breakpoint({
 //   xs:  326,
@@ -19,7 +16,10 @@ import modulus from '@wide/modulus'
 //   xxl: 1600
 // })
 
+// project components (@ alias of src/)
+import intro from '@/components/intro'
+
 // register components
-// modulus.components({
-//   myComponent
-// })
+modulus.components({
+  intro
+})

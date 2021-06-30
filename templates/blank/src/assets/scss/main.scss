@@ -6,7 +6,10 @@
 @use '@wide/styles-utils';
 
 // grid
-@use '@wide/styles-grid';
+@use '@wide/styles-grid' as grid;
+
+// helpers
+@use '@wide/styles-helpers' as helpers;
 
 // base reset
 @use '@wide/styles-reset';
@@ -16,4 +19,14 @@
 @use 'generic/common';
 
 // project components (@ alias of src/)
-// @use '@/components/my-component';
+@use '@/components/intro';
+@use '@/components/module-item';
+
+// Set helpers
+@include helpers.display-helper;
+@include helpers.flexbox-helper;
+@include helpers.flexbox-helper-with-bp;
+// Set grid
+@include grid.container;
+@include grid.row;
+@include grid.col;

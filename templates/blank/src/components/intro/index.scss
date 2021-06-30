@@ -1,0 +1,26 @@
+@use '@wide/styles-utils' as mixins;
+
+.intro {
+  font-family: 'Roboto';
+  text-align: center;
+
+  ul li {
+    list-style: none;
+  }
+  
+  .modules-list {
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  &_block {
+    background-color: #fafafa;
+    padding: 5rem 0;
+
+    &:nth-child(odd) {
+      background-color: #fff;
+    }
+  }
+}
