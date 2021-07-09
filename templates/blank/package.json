@@ -1,0 +1,28 @@
+{
+  "name": "project-name",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "forge serve",
+    "copy": "forge copy",
+    "nuke": "forge nuke",
+    "build": "forge build --production",
+    "build:html": "forge compile twig",
+    "build:css": "forge compile sass",
+    "build:js": "forge compile js",
+    "build:svg": "forge compile svg"
+  },
+  "dependencies": {
+    "@wide/breakpoint": "^2.1.1",
+    "@wide/modulus": "^2.1.1",
+    "@wide/polyfiller": "^2.1.1",
+    "@wide/scroll": "^2.1.0",
+    "@wide/styles-utils": "^2.1.2",
+    "@wide/styles-reset": "^2.1.0",
+    "@wide/styles-helpers": "^2.1.0",
+    "@wide/styles-grid": "^2.1.0",
+    "@wide/viewport": "^2.1.0"
+  },
+  "devDependencies": {
+    "@wide/forge": "^2.3.0"
+  }
+}

@@ -1,0 +1,76 @@
+@use 'sass:math';
+@use '~/core' as *;
+
+$spacing: 40px;
+$spacing-half: math.div($spacing, 2);
+
+.topmenu {
+  z-index: 4000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: $spacing-half 0;
+  background: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  transition: transform 250ms;
+  &.-hidden {
+    transform: translateY(-100%);
+  }
+
+  & + * {
+    margin-top: 100px;
+  }
+
+  > .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .icon {
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &_nav {
+    margin-left: $spacing;
+    margin-right: auto;
+
+    a {
+      margin-right: $spacing;
+      color: inherit;
+    }
+  }
+
+  &_search {
+    position: relative;
+    margin-right: $spacing-half;
+    text-align: right;
+
+    .icon {
+      position: absolute;
+      top: 11px;
+      right: 7px;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    input {
+      &:invalid:not(:focus) {
+        width: 30px;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &_account {
+    margin-right: $spacing;
+  }
+
+  &_langs {
+    width: 70px;
+  }
+}

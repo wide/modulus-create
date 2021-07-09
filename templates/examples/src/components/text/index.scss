@@ -1,0 +1,38 @@
+@use '~/core' as *;
+
+.text {
+
+  &.-only {
+    text-align: center;
+    @include bp-up(lg) {
+      max-width: 60%;
+      margin: auto;
+    }
+  }
+
+  &.-image {
+    h2 {
+      margin-top: 7rem;
+      @include bp-up(lg) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  p + .btn {
+    margin-top: 4rem;
+  }
+
+  img {
+    width: 100%;
+    @include bp-down(lg) {
+      margin-top: 40px;
+    }
+  }
+
+}

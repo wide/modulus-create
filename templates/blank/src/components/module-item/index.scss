@@ -1,0 +1,48 @@
+@use '@wide/styles-utils' as mixins;
+
+.module {
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  &-infos {
+    padding: 0;
+
+    li {
+      font-size: 1.2rem;
+      margin-right: 1.5rem;
+
+      svg {
+        margin-right: .5rem;
+      }
+    }
+  }
+
+  .language {
+    border: 1px solid rgba(27, 31, 35, .1);
+    border-radius: 50%;
+    display: inline-block;
+    height: 1.2rem;
+    position: relative;
+    top: 1px;
+    width: 1.2rem;
+
+    &-javascript {
+      background-color: #f1e05a;
+    }
+  
+    &-scss {
+      background-color: #c6538c;
+    }
+  }
+}

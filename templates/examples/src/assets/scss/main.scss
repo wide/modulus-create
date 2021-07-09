@@ -1,0 +1,31 @@
+@use '~/core' as *;
+
+// base reset
+@use '@wide/styles-reset';
+
+// generic
+@use 'generic/fonts';
+@use 'generic/common';
+@use 'generic/animation';
+@use 'generic/grid';
+
+// modulus components
+@use '@wide/modulus-accordion';
+@use '@wide/modulus-dropdown';
+@use '@wide/modulus-slider';
+@use '@wide/modulus-modal';
+
+// project components (@ alias of src/)
+@use '@/topmenu';
+@use '@/header';
+@use '@/footer';
+@use '@/text';
+@use '@/card';
+@use '@/card-slider';
+@use '@/modal-login';
+
+// elements
+@use 'elements/buttons';
+@use 'elements/forms';
+@use 'elements/section';
+@use 'elements/table';

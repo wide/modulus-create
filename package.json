@@ -1,6 +1,6 @@
 {
   "name": "modulus-create",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "license": "MIT",
   "author": "Aymeric Assier (https://github.com/myeti)",
   "contributors": [
@@ -10,19 +10,20 @@
   "main": "lib",
   "bin": "./lib/cli.js",
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12.18.0"
   },
   "scripts": {
-    "build": "babel src/ -d lib/ --presets babel-preset-es2015 --plugins syntax-object-rest-spread",
+    "build": "babel src/ -d lib/ --presets=@babel/preset-env",
     "prepare": "rimraf lib/ && npm run build"
   },
   "dependencies": {
-    "@wide/scaffolder": "^0.0.1-beta.1"
+    "@wide/scaffolder": "^1.1.0",
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
-    "babel-preset-es2015": "6.24.1",
-    "rimraf": "^3.0.0"
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "rimraf": "^3.0.2"
   }
 }

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>{{ site.title }}</title>
+    {% include '::meta' %}
+    {% include '::favicon' %}
+
+    <link rel="stylesheet" href="assets/main.css?{{ random() }}">
+    {% block stylesheets %}{% endblock %}
+
+  </head>
+  <body>
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+
+    <script src="assets/polyfills.js?{{ random() }}"></script>
+    <script src="assets/main.js?{{ random() }}"></script>
+    {% block scripts %}{% endblock %}
+
+  </body>
+</html>

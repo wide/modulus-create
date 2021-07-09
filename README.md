@@ -5,8 +5,14 @@
 
 ## Usage
 
+To use with minimal modules (`blank` default template), for Modulus v2 experts only:
 ```
 npx modulus-create project-name
+```
+
+To use template with examples (`examples` template), add `--examples` option to the command line:
+```
+npx modulus-create project-name --examples
 ```
 
 
